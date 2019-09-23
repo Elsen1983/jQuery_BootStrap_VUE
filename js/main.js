@@ -1,3 +1,3 @@
-$(document).ready(function(){
-
-});
+var $ = require('jquery');
+window.$ = $;
+require('bootstrap');

@@ -28,12 +28,9 @@
 <![endif]-->
 <!-- Add your site or application content here -->
 
-
-<!--  A $ sign to define/access jQuery-->
-<!--  A (selector) to "query (or find)" HTML elements-->
-<!--  A jQuery action() to be performed on the element(s)-->
-
 <!--BootStrap Grid example with jQuery function -->
+<hr>
+<h2>BootStrap and jQuery</h2>
 <div class="container">
   <div class="row">
     <div class="col-md">
@@ -104,12 +101,44 @@
 </div>
 <hr>
 
+<hr>
+<hr>
+<h2>VUE</h2>
+<div id="app">
+  {{ message }}
+  <div>
+    <span v-if="seen">You see me now</span>
+  </div>
+
+  <!-- use for loop on a list of texts-->
+  <div>
+    <ol>
+      <li v-for='todo in books.book'>
+        Name: {{todo.name}} <br> Price : {{todo.price}} euro
+      </li>
+    </ol>
+  </div>
+  <br>
+  <div>
+    <button v-on:click="reverse">Reverse the main message.</button>
+  </div>
+  <br>
+  <div>
+    <p>Hello <span>{{username}}</span></p>
+    <input id="inputName" v-model="username">
+    <button v-on:click="saveUserName(app.username)">Save username</button>
+    <!-- when the usernameChanged is not equal '' then display the next <p>, else hide it-->
+    <p v-if="usernameChanged!=''">Username changed to: {{usernameChanged}}</p>
+  </div>
+</div>
+
 
 <script src="js/vendor/modernizr-3.7.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
 <script src="js/my_jQueryFunctions.js"></script>
+<script src="js/my_VUEjs.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 

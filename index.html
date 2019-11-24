@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 
-<html class="no-js" lang="eng">
+<html class="no-js" lang="eng" xmlns:v-on="http://www.w3.org/1999/xhtml">
 
 <head>
   <!-- Required and useful meta tags -->
   <meta charset="utf-8">
-  <meta name="description" content="learning project for jQuery">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="learning project for jQuery" name="description">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <title>jQueryLearningProject</title>
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link href="site.webmanifest" rel="manifest">
+  <link href="icon.png" rel="apple-touch-icon">
   <!-- Place favicon.ico in the root directory -->
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <meta name="theme-color" content="#fafafa">
+  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <meta content="#fafafa" name="theme-color">
   <!-- add VUE -->
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="js/my_VUEjs.js"></script>
 
 </head>
 <body>
@@ -29,6 +30,7 @@
 <!-- Add your site or application content here -->
 
 <!--BootStrap Grid example with jQuery function -->
+<hr>
 <hr>
 <h2>BootStrap and jQuery</h2>
 <div class="container">
@@ -47,7 +49,6 @@
 <div class="container">
 
   <div class="row">
-
     <div class="col-lg">
       <p>This is a paragraph too.</p>
     </div>
@@ -125,7 +126,7 @@
   <br>
   <div>
     <p>Hello <span>{{username}}</span></p>
-    <input id="inputName" v-model="username">
+    <label for="inputName"></label><input id="inputName" v-model="username">
     <button v-on:click="saveUserName(app.username)">Save username</button>
     <!-- when the usernameChanged is not equal '' then display the next <p>, else hide it-->
     <p v-if="usernameChanged!=''">Username changed to: {{usernameChanged}}</p>
@@ -134,8 +135,8 @@
 
 
 <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script crossorigin="anonymous"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
 <script src="js/my_jQueryFunctions.js"></script>
 <script src="js/my_VUEjs.js"></script>
@@ -154,19 +155,20 @@
     ga('set', 'transport', 'beacon');
     ga('send', 'pageview')
 </script>
-<script src="https://www.google-analytics.com/analytics.js" async></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
 
 <!-- Installed packages: -->
-<!--Bootstrap : npm install bootstrap@3-->
+<!--Bootstrap : npm install bootstrap --save -->
+<!--jQuery : npm install jQuery --save -->
